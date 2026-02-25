@@ -1,0 +1,285 @@
+
+.footer {
+  background: linear-gradient(135deg, #2c1810 0%, #1a0f09 100%);
+  color: #fff;
+  position: relative;
+  margin-top: 50px;
+  border-top: 3px solid #FFD700;
+}
+
+.footer-decoration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 10px;
+  gap: 20px;
+}
+
+.decoration-line {
+  height: 2px;
+  width: 30%;
+  background: linear-gradient(90deg, transparent, #FFD700, transparent);
+}
+
+.decoration-dome {
+  width: 60px;
+  height: 40px;
+  background: #FFD700;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer-title {
+  color: #FFD700;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #FFD700;
+}
+
+.footer-description {
+  color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,215,0,0.1);
+  border-radius: 50%;
+  color: #FFD700;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #FFD700;
+  color: #2c1810;
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #FFD700;
+  transform: translateX(5px);
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.contact-icon {
+  color: #FFD700;
+  font-size: 1.1rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.newsletter-text {
+  color: #ddd;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter-input {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,215,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: #FFD700;
+  background: rgba(255,255,255,0.15);
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.newsletter-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: #FFD700;
+  color: #2c1810;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background: #ffed4a;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  background: rgba(0,0,0,0.3);
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255,215,0,0.2);
+}
+
+.footer-bottom-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.copyright {
+  margin-bottom: 5px;
+}
+
+.developed {
+  color: #FFD700;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Add this to your existing Footer.css - only the mobile responsive part for social links */
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .footer-decoration {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .decoration-line {
+    width: 80%;
+  }
+  
+  .footer-title {
+    font-size: 1.2rem;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* Make social links horizontal on mobile */
+  .social-links {
+    display: flex;
+    flex-direction: row; /* Keep horizontal */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    justify-content: center; /* Center them */
+    align-items: center;
+    gap: 12px; /* Slightly reduced gap for mobile */
+    margin-top: 15px;
+  }
+
+  .social-links a {
+    width: 38px; /* Slightly smaller on mobile */
+    height: 38px;
+    font-size: 1.1rem;
+    margin: 0; /* Remove any default margins */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 30px 20px;
+  }
+  
+  /* Ensure social links remain horizontal on very small screens */
+  .social-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .social-links a {
+    width: 35px; /* Even smaller on very small screens */
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+/* For extremely small screens, ensure they don't stack */
+@media (max-width: 320px) {
+  .social-links {
+    gap: 8px;
+  }
+  
+  .social-links a {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+}

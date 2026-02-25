@@ -1,0 +1,397 @@
+/* src/components/AartiCollection.css */
+.aarti-collection-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #fdf4e3 0%, #fff1d6 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.aarti-collection-container::before {
+  content: '🕉️';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 100px;
+  opacity: 0.1;
+  transform: rotate(-15deg);
+}
+
+.aarti-collection-container::after {
+  content: '🔱';
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 100px;
+  opacity: 0.1;
+  transform: rotate(15deg);
+}
+
+.aarti-header-section {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  padding: 30px;
+  background: linear-gradient(135deg, #8B4513, #DAA520);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(139, 69, 19, 0.3);
+}
+
+.aarti-header-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 700;
+}
+
+.aarti-header-section p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  font-style: italic;
+}
+
+.om-symbol {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: #FFD700;
+  color: #8B4513;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 3px solid white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.aarti-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 15px 25px;
+  border: none;
+  background: white;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #8B4513;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #FFD700;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.nav-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(218, 165, 32, 0.3);
+}
+
+.nav-btn.active {
+  background: linear-gradient(135deg, #8B4513, #DAA520);
+  color: white;
+  border-color: white;
+}
+
+.btn-number {
+  width: 30px;
+  height: 30px;
+  background: rgba(255,215,0,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.nav-btn.active .btn-number {
+  background: white;
+  color: #8B4513;
+}
+
+.aarti-display {
+  margin-bottom: 50px;
+}
+
+.aarti-card-main {
+  background: white;
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border: 3px solid #FFD700;
+  position: relative;
+  overflow: hidden;
+}
+
+.aarti-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 2rem;
+  opacity: 0.3;
+}
+
+.aarti-main-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.aarti-subtitle {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #DAA520;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px dashed #FFD700;
+}
+
+.aarti-lyrics {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff9e6, #fff);
+  border-radius: 20px;
+}
+
+.lyric-line {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 2.2;
+  color: #333;
+  font-family: 'Tiro Devanagari Hindi', serif;
+  margin: 5px 0;
+}
+
+.empty-line {
+  height: 15px;
+}
+
+.aarti-meaning {
+  margin-top: 40px;
+  padding: 25px;
+  background: linear-gradient(135deg, #8B4513, #DAA520);
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+}
+
+.aarti-meaning h4 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #FFD700;
+}
+
+.meaning-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-style: italic;
+  font-family: 'Tiro Devanagari Hindi', serif;
+}
+
+.aarti-footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #8B4513;
+  font-weight: 600;
+}
+
+.aarti-instructions {
+  margin: 50px 0;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  border: 2px solid #FFD700;
+}
+
+.aarti-instructions h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: #8B4513;
+  margin-bottom: 30px;
+}
+
+.instruction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.instruction-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff9e6, #fff);
+  border-radius: 10px;
+  border: 1px solid #FFD700;
+}
+
+.instr-number {
+  width: 40px;
+  height: 40px;
+  background: #8B4513;
+  color: #FFD700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.instruction-item p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.aarti-benefits {
+  padding: 40px;
+  background: linear-gradient(135deg, #8B4513, #DAA520);
+  border-radius: 30px;
+  color: white;
+}
+
+.aarti-benefits h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #FFD700;
+}
+
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 25px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,215,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.2);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.benefit-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #FFD700;
+}
+
+.benefit-item p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .aarti-header-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .aarti-main-title {
+    font-size: 2rem;
+  }
+  
+  .nav-btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aarti-header-section h1 {
+    font-size: 2rem;
+  }
+  
+  .aarti-navigation {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .nav-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .aarti-card-main {
+    padding: 20px;
+  }
+  
+  .lyric-line {
+    font-size: 1rem;
+  }
+  
+  .instruction-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .benefits-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .aarti-header-section h1 {
+    font-size: 1.5rem;
+  }
+  
+  .aarti-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .aarti-main-title {
+    font-size: 1.5rem;
+  }
+  
+  .lyric-line {
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+  
+  .aarti-meaning h4 {
+    font-size: 1.1rem;
+  }
+  
+  .meaning-text {
+    font-size: 1rem;
+  }
+}

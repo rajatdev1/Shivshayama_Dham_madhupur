@@ -1,0 +1,390 @@
+/* src/components/About.css */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #fff9e6 0%, #fff 100%);
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(139, 69, 19, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-container::before {
+  content: '🕉️';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 150px;
+  opacity: 0.05;
+  transform: rotate(15deg);
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #8B4513, #DAA520);
+  border-radius: 20px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-header::before {
+  content: '🔱';
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 80px;
+  opacity: 0.2;
+}
+
+.about-header::after {
+  content: '🌸';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 80px;
+  opacity: 0.2;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.about-header .subtitle {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  font-style: italic;
+  position: relative;
+  z-index: 2;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  border: 2px solid #FFD700;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  font-family: 'Tiro Devanagari Hindi', serif;
+}
+
+.intro-image {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 5px solid #FFD700;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.intro-image:hover img {
+  transform: scale(1.05);
+}
+
+.mission-vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.mission-card, .vision-card {
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-card {
+  background: linear-gradient(135deg, #8B4513, #DAA520);
+  color: white;
+}
+
+.vision-card {
+  background: white;
+  border: 2px solid #FFD700;
+  color: #333;
+}
+
+.mission-card:hover, .vision-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(218, 165, 32, 0.3);
+}
+
+.mission-card::before, .vision-card::before {
+  content: '“';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 100px;
+  opacity: 0.2;
+  font-family: serif;
+}
+
+.mission-card::after, .vision-card::after {
+  content: '”';
+  position: absolute;
+  bottom: -40px;
+  right: 20px;
+  font-size: 100px;
+  opacity: 0.2;
+  font-family: serif;
+}
+
+.mission-card h3, .vision-card h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.mission-card p, .vision-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  position: relative;
+  z-index: 2;
+}
+
+.history-section, .architecture-section {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px solid #FFD700;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.history-section h2, .architecture-section h2 {
+  color: #8B4513;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #FFD700;
+  position: relative;
+}
+
+.history-section h2::after, .architecture-section h2::after {
+  content: '📜';
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+  font-size: 1.5rem;
+  background: white;
+  padding: 0 10px;
+}
+
+.history-content p, .architecture-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.facilities-section {
+  background: linear-gradient(135deg, #fff9e6, #fff);
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px solid #FFD700;
+}
+
+.facilities-section h2 {
+  color: #8B4513;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.facility-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border: 1px solid #FFD700;
+  transition: all 0.3s ease;
+}
+
+.facility-item:hover {
+  transform: translateX(10px);
+  background: linear-gradient(135deg, #8B4513, #DAA520);
+  color: white;
+  border-color: white;
+}
+
+.facility-item:hover .facility-icon {
+  color: white;
+}
+
+.facility-icon {
+  font-size: 1.5rem;
+  color: #DAA520;
+  font-weight: bold;
+}
+
+.facility-item span {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.achievements-section {
+  padding: 40px;
+  background: linear-gradient(135deg, #8B4513, #DAA520);
+  border-radius: 20px;
+  color: white;
+}
+
+.achievements-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #FFD700;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.achievement-card {
+  background: rgba(255,255,255,0.1);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,215,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.2);
+}
+
+.achievement-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.achievement-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.trust-info1 {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  border: 3px solid #FFD700;
+}
+
+.trust-info h2 {
+  color: #8B4513;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.trust-details {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.trust-row {
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px dashed #DAA520;
+}
+
+.trust-row:last-child {
+  border-bottom: none;
+}
+
+.trust-label {
+  width: 150px;
+  font-weight: 600;
+  color: #8B4513;
+}
+
+.trust-value {
+  flex: 1;
+  color: #666;
+}
+
+@media (max-width: 992px) {
+  .about-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about-intro {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-vision {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 2rem;
+  }
+  
+  .facilities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .trust-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .trust-label {
+    width: 100%;
+  }
+}
